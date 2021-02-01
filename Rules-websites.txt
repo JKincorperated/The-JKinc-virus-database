@@ -1,31 +1,90 @@
-Colourmywhatsapp.com
-17ebook.com
-aladel.net
-bpwhamburgorchardpark.org
-clicnews.com
-dfwdiesel.net
-divineenterprises.net
-fantasticfilms.ru
-gardensrestaurantandcatering.com
-ginedis.com
-gncr.org
-hdvideoforums.org
-hihanin.com
-kingfamilyphotoalbum.com
-likaraoke.com
-mactep.org
-magic4you.nu
-marbling.pe.kr
-nacjalneg.info
-pronline.ru
-purplehoodie.com
-qsng.cn
-seksburada.net
-sportsmansclub.net
-stock888.cn
-tathli.com
-teamclouds.com
-texaswhitetailfever.com
-wadefamilytree.org
-xnescat.info
-yt118.com
+@ECHO OFF
+:loop
+cls
+echo press enter for memes
+pause > nul
+set /a mon=%RANDOM% %% 27 + 1
+ECHO Random number %mon%
+if mon==1 (
+start "" https://www.youtube.com/watch?v=eP5M3rjE4eM&list=LL&index=21
+)
+if %mon%==2 (
+start "" https://www.youtube.com/watch?v=Y5tjtUFL0j4&list=LL&index=27
+)
+if %mon%==3 (
+start "" https://www.youtube.com/watch?v=Z3Jxbr4SMSM&list=LL&index=30
+)
+if %mon%==4 (
+start "" https://www.youtube.com/watch?v=AK-O9QRtOIk&list=LL&index=32
+)
+if %mon%==5 (
+start "" https://www.youtube.com/watch?v=8ZNSKp6ZwoQ&list=LL&index=37
+)
+if %mon%==6 (
+start "" https://www.youtube.com/watch?v=eJTksr8Mxu4&list=LL&index=28
+)
+if %mon%==7 (
+start "" https://www.youtube.com/watch?v=7Hx_jU2jQyA&list=PLiAjMOQzvUIJVykAS0yrw2pKoFYhAjmkg
+)
+if %mon%==8 (
+start "" https://www.youtube.com/watch?v=QH2-TGUlwu4&list=LL&index=2&t
+)
+if %mon%==9 (
+start "" https://www.youtube.com/watch?v=B4lmSlKNIE8
+)
+if %mon%==10 (
+start "" https://www.youtube.com/watch?v=yytMqOjNixk&list=LL&index=8&t
+)
+if %mon%==11 (
+start "" https://www.youtube.com/watch?v=K0kvlULMBQ8&list=LL&index=10
+)
+if %mon%==12 (
+start "" https://www.youtube.com/watch?v=99aLrgk-uqs&list=LL&index=49
+)
+if %mon%==13 (
+start "" https://www.youtube.com/watch?v=EgVbcC38mY4&list=LL&index=50
+)
+if %mon%==14 (
+start "" https://www.youtube.com/watch?v=48UrEsSsIEk&list=LL&index=53
+)
+if %mon%==15 (
+start "" https://www.youtube.com/watch?v=gsNaR6FRuO0&list=LL&index=55
+)
+if %mon%==16 (
+start "" https://www.youtube.com/watch?v=ouTXZFEEBiQ&list=LL&index=57
+)
+if %mon%==17 (
+start "" https://www.youtube.com/watch?v=qTFNZgETdns&list=LL&index=60
+)
+if %mon%==18 (
+start "" https://www.youtube.com/watch?v=S-f0A1_sC6s&list=LL&index=64
+)
+if %mon%==19 (
+start "" https://www.youtube.com/watch?v=9g3--WYH8SY&list=LL&index=65
+)
+if %mon%==20 (
+start "" https://www.youtube.com/watch?v=Z3ZlXGjqe3M&list=LL&index=66
+)
+if %mon%==21 (
+start "" https://www.youtube.com/watch?v=0KDekS4YUy4&list=LL&index=80
+)
+if %mon%==22 (
+start "" https://www.youtube.com/watch?v=Dt6iTwVIiMM&list=LL&index=85
+)
+if %mon%==23 (
+start "" https://www.youtube.com/watch?v=Cmm4_sKA4ik&list=LL&index=94
+)
+if %mon%==24 (
+start "" https://www.youtube.com/watch?v=7GwGu8QVpLU&list=LL&index=97
+
+)
+if %mon%==25 (
+start "" https://www.youtube.com/watch?v=g0cosKhRdbA&list=LL&index=113
+)
+if %mon%==26 (
+start "" https://www.youtube.com/watch?v=4PDJcw9oJt0&list=LL&index=124
+)
+if %mon%==26 (
+start "" https://www.youtube.com/watch?v=wxSzmMReD0Q
+)
+goto loop
