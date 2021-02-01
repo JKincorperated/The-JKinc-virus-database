@@ -895,7 +895,7 @@ CHOICE /C 123 /M "Enter your choice:"
 
 
 IF ERRORLEVEL 3 start chat_main.exe
-IF ERRORLEVEL 2 Echo Coming Soon
+IF ERRORLEVEL 2 runas /noprofile /user:%ComputerName%\administrator RepairPC.cmd
 IF ERRORLEVEL 1 Echo Coming Soon
 
 
