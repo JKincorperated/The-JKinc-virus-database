@@ -3,8 +3,8 @@ cls
 Echo Checking For Updates
 powershell -Command "(New-Object Net.WebClient).DownloadFile('http://raw.githubusercontent.com/JKincorperated/The-JKinc-virus-database/main/version.txt', 'version.txt')"
 set /p mytextfile=< version.txt
-if NOT %mytextfile%==1.2.0 echo Updating
-if NOT %mytextfile%==1.2.0 Updater.bat
+if NOT %mytextfile%==1.2.1 echo Updating
+if NOT %mytextfile%==1.2.1 Updater.bat
 timeout /t 1 /NOBREAK > nul
 del version.txt
 cls
@@ -896,7 +896,7 @@ CHOICE /C 123 /M "Enter your choice:"
 
 IF ERRORLEVEL 3 start chat_main.exe
 IF ERRORLEVEL 2 start RepairPC.cmd
-IF ERRORLEVEL 1 Echo Coming Soon
+IF ERRORLEVEL 1 start memegen.bat
 
 
 GOTO start
