@@ -3,8 +3,8 @@ cls
 Echo Checking For Updates
 powershell -Command "(New-Object Net.WebClient).DownloadFile('http://raw.githubusercontent.com/JKincorperated/The-JKinc-virus-database/main/version.txt', 'version.txt')"
 set /p mytextfile=< version.txt
-if NOT %mytextfile%==1.1.2 echo Updating
-if NOT %mytextfile%==1.1.2 Updater.bat
+if NOT %mytextfile%==1.1.3 echo Updating
+if NOT %mytextfile%==1.1.3 Updater.bat
 timeout /t 1 /NOBREAK > nul
 del version.txt
 cls
