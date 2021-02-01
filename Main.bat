@@ -92,7 +92,7 @@ ECHO 6. Can't find my document
 ECHO 7. screen is blank
 ECHO 8. sound is not working
 ECHO 9. Useful tips
-ECHO 0. Other
+ECHO 0. Tools
 ECHO.
 
 CHOICE /C 1234567890 /M "Enter your choice:"
@@ -887,7 +887,7 @@ echo Please Push the number for the error you are experiencing
 echo.
 echo.
 ECHO 1. Coming Soon
-ECHO 2. Coming Soon
+ECHO 2. Run PC repair tool
 ECHO 3. Chat With A Technician
 ECHO.
 
