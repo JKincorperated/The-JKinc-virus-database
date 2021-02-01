@@ -886,7 +886,7 @@ EChO.
 echo Please Push the number for the error you are experiencing
 echo.
 echo.
-ECHO 1. Coming Soon
+ECHO 1. Meme Generator
 ECHO 2. Run PC repair tool
 ECHO 3. Chat With A Technician
 ECHO.
