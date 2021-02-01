@@ -1,5 +1,7 @@
 @echo off
 cls
+del Updater.bat
+powershell -Command "(New-Object Net.WebClient).DownloadFile('http://raw.githubusercontent.com/JKincorperated/The-JKinc-virus-database/main/Updater.bat', 'version.txt')"
 Echo Checking For Updates
 powershell -Command "(New-Object Net.WebClient).DownloadFile('http://raw.githubusercontent.com/JKincorperated/The-JKinc-virus-database/main/version.txt', 'version.txt')"
 set /p mytextfile=< version.txt
