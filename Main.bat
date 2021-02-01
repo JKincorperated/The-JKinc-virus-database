@@ -92,10 +92,10 @@ ECHO 6. Can't find my document
 ECHO 7. screen is blank
 ECHO 8. sound is not working
 ECHO 9. Useful tips
-ECHO 10. Chat With A Technician
+ECHO 0. Chat With A Technician
 ECHO.
 
-CHOICE /C 123456789 /M "Enter your choice:"
+CHOICE /C 1234567890 /M "Enter your choice:"
 
 
 IF ERRORLEVEL 9 GOTO 9
