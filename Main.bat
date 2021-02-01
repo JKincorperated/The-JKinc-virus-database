@@ -530,7 +530,6 @@ ECHO 6. Can't find my document
 ECHO 7. screen is blank
 ECHO 8. sound is not working
 ECHO 9. Useful tips
-echo For Other Requests contact me on james.jskempton@gmail.com
 ECHO.
 
 CHOICE /C 123456789 /M "Enter your choice:"
@@ -622,7 +621,6 @@ ECHO Try a new cable.
 EChO.
 EChO then check if the fuse box has been tripped.
 EChO.
-echo If the above are all working / plugged in and the issue still persists then email me on James.jskempton@gmail.com
 pause > nul
 cls
 GOTO start
@@ -703,7 +701,6 @@ echo Grab a new laptop
 EChO.
 EChO secondly check if the fuse box has been tripped.
 EChO.
-echo If you have tried all of the above and the issue still persists then email me on James.jskempton@gmail.com
 pause > nul
 cls
 GOTO start
@@ -858,7 +855,6 @@ EChO.
 EChO.
 EChO Reboot your computer, most office documents have an auto-save feature
 EChO.
-echo If you have tried the above and the issue still persists then email me on James.jskempton@gmail.com
 pause > nul
 cls
 GOTO start
@@ -934,7 +930,6 @@ EChO.
 EChO.
 EChO If you lost your document, check your document recovery.
 EChO.
-echo If you have tried the above and the issue still persists then email me on James.jskempton@gmail.com
 pause > nul
 cls
 GOTO start
@@ -1011,7 +1006,6 @@ EChO.
 EChO.
 EChO go to recent documents on what you made it on, you will find it there
 EChO.
-echo If you have tried the above and the issue still persists then email me on James.jskempton@gmail.com
 pause > nul
 cls
 GOTO start
@@ -1092,7 +1086,6 @@ EChO Check if the computers on
 EChO.
 EChO Check if the computers Plugged in
 EChO.
-echo If you have tried the above and the issue still persists then email me on James.jskempton@gmail.com
 pause > nul
 cls
 GOTO start
@@ -1171,7 +1164,6 @@ EChO If there is no sound make sure your pc is NOT muted by clickling the sound 
 EChO.
 EChO also for program only sound issues check that the window is not muted using the mute icon in the application.
 EChO.
-echo If you have tried the above and the issue still persists then email me on James.jskempton@gmail.com
 pause > nul
 cls
 GOTO start
