@@ -92,7 +92,7 @@ ECHO 6. Can't find my document
 ECHO 7. screen is blank
 ECHO 8. sound is not working
 ECHO 9. Useful tips
-ECHO 0. Chat With A Technician
+ECHO 0. Other
 ECHO.
 
 CHOICE /C 1234567890 /M "Enter your choice:"
@@ -814,6 +814,90 @@ cls
 GOTO start
 
 :10
-start chat_main.exe
+cls
+echo                        ((((((((((((((((((((((((((((((((((       
+ping 127.0.0.1 -n 1 -w 250> nul                
+echo                      (((((((((((((((((((((((((((((((((((((((    
+ping 127.0.0.1 -n 1 -w 250> nul               
+echo                   ((((((((((((((((((((((((((((((((((((((((((((       
+ping 127.0.0.1 -n 1 -w 250> nul          
+echo                 (((((((((                               ((((((((( 
+ping 127.0.0.1 -n 1 -w 250> nul             
+echo              (((((((((                                    (((((((((  
+ping 127.0.0.1 -n 1 -w 250> nul          
+echo            (((((((((                                         ((((((((( 
+ping 127.0.0.1 -n 1 -w 250> nul        
+echo         (((((((((                   (((((((((                  ((((((((( 
+ping 127.0.0.1 -n 1 -w 250> nul      
+echo       (((((((((                    (((((((((((                    (((((((((   
+ping 127.0.0.1 -n 1 -w 250> nul 
+echo    (((((((((                       ((((((((((((                     (((((((((   
+ping 127.0.0.1 -n 1 -w 250> nul
+echo  (((((((((                        (((((((((((((                        (((((((((
+ping 127.0.0.1 -n 1 -w 250> nul
+echo (((((((                          (((((((((((((((                         (((((((
+ping 127.0.0.1 -n 1 -w 250> nul
+echo ((((((                           (((((((((((((((                          ((((((
+ping 127.0.0.1 -n 1 -w 250> nul
+echo ((((((                          (((((((( ((((((((                         ((((((
+ping 127.0.0.1 -n 1 -w 250> nul
+echo ((((((                          (((((((  ((((((((                         ((((((
+ping 127.0.0.1 -n 1 -w 250> nul
+echo ((((((                         ((((((((  (((((((((                        ((((((
+ping 127.0.0.1 -n 1 -w 250> nul
+echo ((((((                         ((((((((   ((((((((                        ((((((
+ping 127.0.0.1 -n 1 -w 250> nul
+echo ((((((                        ((((((((    (((((((((                       ((((((
+ping 127.0.0.1 -n 1 -w 250> nul
+echo ((((((                       (((((((((     (((((((((                      ((((((
+ping 127.0.0.1 -n 1 -w 250> nul
+echo ((((((                       (((((((((((((((((((((((                      ((((((
+ping 127.0.0.1 -n 1 -w 250> nul
+echo ((((((                      (((((((((((((((((((((((((                     ((((((
+ping 127.0.0.1 -n 1 -w 250> nul
+echo ((((((                      (((((((((((((((((((((((((                     ((((((
+ping 127.0.0.1 -n 1 -w 250> nul
+echo ((((((                     (((((((((         (((((((((                    ((((((
+ping 127.0.0.1 -n 1 -w 250> nul
+echo ((((((((                   ((((((((          (((((((((                   (((((((
+ping 127.0.0.1 -n 1 -w 250> nul
+echo  (((((((((                (((((((((           (((((((((                (((((((( 
+ping 127.0.0.1 -n 1 -w 250> nul
+echo     (((((((((            (((((((((            ((((((((((            (((((((((   
+ping 127.0.0.1 -n 1 -w 250> nul
+echo       (((((((((          (((((((((            ((((((((((          ((((((((      
+ping 127.0.0.1 -n 1 -w 250> nul
+echo          (((((((((                                             (((((((((        
+ping 127.0.0.1 -n 1 -w 250> nul
+echo            (((((((((                                         ((((((((           
+ping 127.0.0.1 -n 1 -w 250> nul
+echo               (((((((((                                   (((((((((             
+ping 127.0.0.1 -n 1 -w 250> nul
+echo                 (((((((((                               ((((((((                
+ping 127.0.0.1 -n 1 -w 250> nul
+echo                    (((((((((((((((((((((((((((((((((((((((((((                  
+ping 127.0.0.1 -n 1 -w 250> nul
+echo                      ((((((((((((((((((((((((((((((((((((((                     
+ping 127.0.0.1 -n 1 -w 250> nul
+echo                          A.E.G.I.S copyright 2020 JKinc
+EChO.
+EChO.
+EChO.
+echo Please Push the number for the error you are experiencing
+echo.
+echo.
+ECHO 1. Chat With A Technician
+ECHO 2. Coming Soon
+ECHO 3. Coming Soon
+ECHO.
+
+CHOICE /C 123 /M "Enter your choice:"
+
+
+IF ERRORLEVEL 3 start chat_main.exe
+IF ERRORLEVEL 2 Echo Coming Soon
+IF ERRORLEVEL 1 Echo Coming Soon
+
+
 GOTO start
 :End
