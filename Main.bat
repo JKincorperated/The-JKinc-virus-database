@@ -92,6 +92,7 @@ ECHO 6. Can't find my document
 ECHO 7. screen is blank
 ECHO 8. sound is not working
 ECHO 9. Useful tips
+ECHO 10. Chat With A Technician
 ECHO.
 
 CHOICE /C 123456789 /M "Enter your choice:"
@@ -106,6 +107,7 @@ IF ERRORLEVEL 4 GOTO 4
 IF ERRORLEVEL 3 GOTO 3
 IF ERRORLEVEL 2 GOTO 2
 IF ERRORLEVEL 1 GOTO 1
+IF ERRORLEVEL 0 GOTO 10
 
 :1
 cls
@@ -811,4 +813,7 @@ pause > nul
 cls
 GOTO start
 
+:10
+GOTO start
+start chat_main.exe
 :End
