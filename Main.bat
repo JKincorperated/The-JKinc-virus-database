@@ -21,8 +21,8 @@ IF "%Connected%"=="true" (
 Echo Checking For Updates
 powershell -Command "Invoke-WebRequest -Uri http://raw.githubusercontent.com/JKincorperated/The-JKinc-virus-database/main/version.txt -OutFile version.txt"
 set /p mytextfile=< version.txt
-if NOT %mytextfile%==1.2.7 echo Updating
-if NOT %mytextfile%==1.2.7 Updater.bat
+if NOT %mytextfile%==1.2.8 echo Updating
+if NOT %mytextfile%==1.2.8 Updater.bat
 goto start
 
 timeout /t 1 /NOBREAK > nul
