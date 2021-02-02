@@ -1,4 +1,5 @@
 @echo off
+set vers=1.2.9
 cls
 set currentpath=%~dp0
 cd %currentpath%
@@ -21,8 +22,8 @@ IF "%Connected%"=="true" (
 Echo Checking For Updates
 powershell -Command "Invoke-WebRequest -Uri http://raw.githubusercontent.com/JKincorperated/The-JKinc-virus-database/main/version.txt -OutFile version.txt"
 set /p mytextfile=< version.txt
-if NOT %mytextfile%==1.2.8 echo Updating
-if NOT %mytextfile%==1.2.8 Updater.bat
+if NOT %mytextfile%==%vers% echo Updating
+if NOT %mytextfile%==%vers% Updater.bat
 goto start
 
 timeout /t 1 /NOBREAK > nul
