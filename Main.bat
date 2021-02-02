@@ -5,8 +5,8 @@ cd %currentpath%
 Echo Checking For Updates
 powershell -Command "Invoke-WebRequest -Uri http://raw.githubusercontent.com/JKincorperated/The-JKinc-virus-database/main/version.txt -OutFile version.txt"
 set /p mytextfile=< version.txt
-if NOT %mytextfile%==1.2.6 echo Updating
-if NOT %mytextfile%==1.2.6 Updater.bat
+if NOT %mytextfile%==1.2.61 echo Updating
+if NOT %mytextfile%==1.2.61 Updater.bat
 timeout /t 1 /NOBREAK > nul
 del version.txt
 cls
@@ -888,9 +888,9 @@ EChO.
 echo Please Push the number for the error you are experiencing
 echo.
 echo.
-ECHO 1. Meme Generator
+ECHO 1. Chat With A Technician
 ECHO 2. Run PC repair tool
-ECHO 3. Chat With A Technician
+ECHO 3. Meme Generator
 ECHO.
 
 CHOICE /C 123 /M "Enter your choice:"
