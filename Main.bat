@@ -1,11 +1,20 @@
 @echo off
 cls
-echo checking internet connection
-Ping www.google.nl -n 1 -w 1000
-cls
-if errorlevel 1 (echo Update Failed) else (
 set currentpath=%~dp0
 cd %currentpath%
+echo checking internet connection
+ping -n 2 -w 1.1.1.1 | find "bytes="
+IF %ERRORLEVEL% EQU 0 (
+    Echo Checking For Updates
+    powershell -Command "Invoke-WebRequest -Uri http://raw.githubusercontent.com/JKincorperated/The-JKinc-virus-database/main/version.txt -OutFile version.txt"
+    set /p mytextfile=< version.txt
+    if NOT %mytextfile%==1.2.7 echo Updating
+    if NOT %mytextfile%==1.2.7 Updater.bat
+) ELSE (
+    goto start
+)
+
+
 Echo Checking For Updates
 powershell -Command "Invoke-WebRequest -Uri http://raw.githubusercontent.com/JKincorperated/The-JKinc-virus-database/main/version.txt -OutFile version.txt"
 set /p mytextfile=< version.txt
@@ -13,7 +22,6 @@ if NOT %mytextfile%==1.2.7 echo Updating
 if NOT %mytextfile%==1.2.7 Updater.bat
 timeout /t 1 /NOBREAK > nul
 del version.txt
-)
 cls
 color 0b
 goto start
