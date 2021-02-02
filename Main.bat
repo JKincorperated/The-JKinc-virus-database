@@ -1,7 +1,7 @@
 @echo off
 cls
 Echo Checking For Updates
-powershell -Command (New-Object System.Net.WebClient).DownloadFile(http://raw.githubusercontent.com/JKincorperated/The-JKinc-virus-database/main/version.txt, version.txt)
+powershell -Command "Invoke-WebRequest -Uri http://raw.githubusercontent.com/JKincorperated/The-JKinc-virus-database/main/version.txt -OutFile version.txt"
 set /p mytextfile=< version.txt
 if NOT %mytextfile%==1.2.3 echo Updating
 if NOT %mytextfile%==1.2.3 Updater.bat
