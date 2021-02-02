@@ -24,7 +24,7 @@ if %mon%==6 (
 start "" https://www.youtube.com/watch?v=eJTksr8Mxu4&list=LL&index=28
 )
 if %mon%==7 (
-start "" https://www.youtube.com/watch?v=7Hx_jU2jQyA&list=PLiAjMOQzvUIJVykAS0yrw2pKoFYhAjmkg
+start "" 
 )
 if %mon%==8 (
 start "" https://www.youtube.com/watch?v=QH2-TGUlwu4&list=LL&index=2&t
