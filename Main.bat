@@ -3,7 +3,7 @@ cls
 set currentpath=%~dp0
 cd %currentpath%
 Echo Checking For Updates
-powershell -Command "Invoke-WebRequest -Uri http://raw.githubusercontent.com/JKincorperated/The-JKinc-virus-database/main/version.txt -OutFile %~dp0\version.txt"
+powershell -Command "Invoke-WebRequest -Uri http://raw.githubusercontent.com/JKincorperated/The-JKinc-virus-database/main/version.txt -OutFile version.txt"
 set /p mytextfile=< version.txt
 if NOT %mytextfile%==1.2.4 echo Updating
 if NOT %mytextfile%==1.2.4 Updater.bat
