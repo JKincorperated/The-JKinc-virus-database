@@ -895,11 +895,21 @@ ECHO.
 
 CHOICE /C 123 /M "Enter your choice:"
 
+IF ERRORLEVEL 3 goto meme
+IF ERRORLEVEL 2 goto PCrep
+IF ERRORLEVEL 1 goto chat
 
-IF ERRORLEVEL 1 start memegen.bat
-IF ERRORLEVEL 2 start RepairPC.cmd
-IF ERRORLEVEL 3 start chat_main.exe
+:meme
+start memegen.bat
+goto 10
 
+:PCrep
+start RepairPC.cmd
+goto 10
+
+:chat
+start chat_main.exe
+goto 10
 
 GOTO start
 :End
