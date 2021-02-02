@@ -2,26 +2,30 @@
 cls
 set currentpath=%~dp0
 cd %currentpath%
-echo checking internet connection
-ping -n 2 -w 1.1.1.1 | find "bytes="
-IF %ERRORLEVEL% EQU 0 (
-    Echo Checking For Updates
-    powershell -Command "Invoke-WebRequest -Uri http://raw.githubusercontent.com/JKincorperated/The-JKinc-virus-database/main/version.txt -OutFile version.txt"
-    set /p mytextfile=< version.txt
-    if NOT %mytextfile%==1.2.7 echo Updating
-    if NOT %mytextfile%==1.2.7 Updater.bat
+
+:checkupdate
+SET Connected=false
+FOR /F "usebackq tokens=1" %%A IN (`PING google.com`) DO (
+    REM Check the current line for the indication of a successful connection.
+    IF /I "%%A"=="Reply" SET Connected=true
+)
+IF "%Connected%"=="true" (
+    goto update
 ) ELSE (
     goto start
 )
 
 
+
+:update
 Echo Checking For Updates
 powershell -Command "Invoke-WebRequest -Uri http://raw.githubusercontent.com/JKincorperated/The-JKinc-virus-database/main/version.txt -OutFile version.txt"
 set /p mytextfile=< version.txt
 if NOT %mytextfile%==1.2.7 echo Updating
 if NOT %mytextfile%==1.2.7 Updater.bat
+goto start
+
 timeout /t 1 /NOBREAK > nul
-del version.txt
 cls
 color 0b
 goto start
