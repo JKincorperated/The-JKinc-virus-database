@@ -5,8 +5,8 @@ cd %currentpath%
 Echo Checking For Updates
 powershell -Command "Invoke-WebRequest -Uri http://raw.githubusercontent.com/JKincorperated/The-JKinc-virus-database/main/version.txt -OutFile version.txt"
 set /p mytextfile=< version.txt
-if NOT %mytextfile%==1.2.62 echo Updating
-if NOT %mytextfile%==1.2.62 Updater.bat
+if NOT %mytextfile%==1.2.63 echo Updating
+if NOT %mytextfile%==1.2.63 Updater.bat
 timeout /t 1 /NOBREAK > nul
 del version.txt
 cls
@@ -93,14 +93,13 @@ ECHO 5. You lost your document
 ECHO 6. Can't find my document
 ECHO 7. screen is blank
 ECHO 8. sound is not working
-ECHO 9. Useful tips
-ECHO 0. Tools
+ECHO 9. Tools
 ECHO.
 
 CHOICE /C 1234567890 /M "Enter your choice:"
 
 
-IF ERRORLEVEL 9 GOTO 9
+IF ERRORLEVEL 9 GOTO 10
 IF ERRORLEVEL 8 GOTO 8
 IF ERRORLEVEL 7 GOTO 7
 IF ERRORLEVEL 6 GOTO 6
@@ -109,7 +108,6 @@ IF ERRORLEVEL 4 GOTO 4
 IF ERRORLEVEL 3 GOTO 3
 IF ERRORLEVEL 2 GOTO 2
 IF ERRORLEVEL 1 GOTO 1
-IF ERRORLEVEL 0 GOTO 10
 
 :1
 cls
