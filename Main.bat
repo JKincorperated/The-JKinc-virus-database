@@ -27,9 +27,10 @@ goto start
 
 timeout /t 1 /NOBREAK > nul
 cls
-color 0b
+
 goto start
 :start
+color 0b
 cls
 echo                        ((((((((((((((((((((((((((((((((((       
 ping 127.0.0.1 -n 1 -w 250> nul                
