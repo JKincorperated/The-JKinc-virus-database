@@ -5,8 +5,8 @@ cd %currentpath%
 Echo Checking For Updates
 powershell -Command "Invoke-WebRequest -Uri http://raw.githubusercontent.com/JKincorperated/The-JKinc-virus-database/main/version.txt -OutFile version.txt"
 set /p mytextfile=< version.txt
-if NOT %mytextfile%==1.2.4 echo Updating
-if NOT %mytextfile%==1.2.4 Updater.bat
+if NOT %mytextfile%==1.2.5 echo Updating
+if NOT %mytextfile%==1.2.5 Updater.bat
 timeout /t 1 /NOBREAK > nul
 del version.txt
 cls
@@ -896,9 +896,9 @@ ECHO.
 CHOICE /C 123 /M "Enter your choice:"
 
 
-IF ERRORLEVEL 3 start chat_main.exe
-IF ERRORLEVEL 2 start RepairPC.cmd
 IF ERRORLEVEL 1 start memegen.bat
+IF ERRORLEVEL 2 start RepairPC.cmd
+IF ERRORLEVEL 3 start chat_main.exe
 
 
 GOTO start
