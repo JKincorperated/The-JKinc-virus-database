@@ -44,3 +44,4 @@ DISM /Online /Cleanup-Image /RestoreHealth
 SFC /scannow
 wuauclt /detectnow 
 wuauclt /updatenow
+wuInstall /install /quiet /disableprompt /autoaccepteula /rebootcycle
