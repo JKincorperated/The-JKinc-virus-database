@@ -45,3 +45,12 @@ SFC /scannow
 wuauclt /detectnow 
 wuauclt /updatenow
 wuInstall /install /quiet /disableprompt /autoaccepteula /rebootcycle
+taskkill /F /IM explorer.exe & start explorer
+
+RUNDLL32.EXE USER32.DLL,UpdatePerUserSystemParameters ,1 ,True
+
+ipconfig /release
+
+ipconfig /flushdns
+
+ipconfig /renew
