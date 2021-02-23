@@ -62,7 +62,12 @@ pause > nul
 echo Under NO curcumstances shoud you remove any connected drives
 echo or quit the application
 echo.
-echo Press Enter To Start The Procedure
-pause > nul
+:code
+SET /A RAND=%RANDOM%%%1000+1
+set /p delBuild=Please Enter The Code %RAND% :
+if delBuild==RAND GOTO startserv else GOTO code
+:startserv
+echo Press Enter To Start The Program
+Pause > nul
 for %%x in (A B C D E F G H I J K L M N O P Q R S T U V W X Y Z) do (
 if exist %%x:\ echo.y|chkdsk %%x: /f)
