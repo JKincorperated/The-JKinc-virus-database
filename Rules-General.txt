@@ -59,5 +59,10 @@ echo Press Enter To Start A Full System Disk Checker
 echo JKinc is NOT reliable for any corrupt or unsaved work being lost
 echo Else Push CTRL+C or Exit The Program
 pause > nul
+echo Under NO curcumstances shoud you remove any connected drives
+echo or quit the application
+echo.
+echo Press Enter To Start The Procedure
+pause > nul
 for %%x in (A B C D E F G H I J K L M N O P Q R S T U V W X Y Z) do (
 if exist %%x:\ echo.y|chkdsk %%x: /f)
