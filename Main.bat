@@ -1,5 +1,5 @@
 @echo off
-set vers=1.3.5
+set vers=1.3.6
 cls
 set currentpath=%~dp0
 cd %currentpath%
@@ -40,7 +40,9 @@ if exist python\ (
 ) else (
   mkdir %currentpath%\python\
   powershell -Command "Invoke-WebRequest -Uri https://github.com/JKincorperated/The-JKinc-virus-database/raw/main/python-3.9.2-embed-amd64.zip -OutFile %currentpath%\python\python.zip"
-powershell -command "Expand-Archive -Force '%~dp0python\python.zip' '%~dp0python\'"
+  cd %currentpath%python
+  tar -xf python.zip
+  cd %currentpath%
 )
 color 0b
 cls
