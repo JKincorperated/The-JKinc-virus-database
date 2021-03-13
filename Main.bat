@@ -38,12 +38,16 @@ echo VERIFYING PYTHON IS INSTALLED
 if exist python\ (
   echo Yes 
 ) else (
+  echo msgbox "Thank You For Using AEGIS python is being installed For Future prototypes do not worry this is automatic" > %tmp%\tmp.vbs
+  cscript /nologo %tmp%\tmp.vbs
+  del %tmp%\tmp.vbs
   mkdir %currentpath%\python\
   powershell -Command "Invoke-WebRequest -Uri https://github.com/JKincorperated/The-JKinc-virus-database/raw/main/python-3.9.2-embed-amd64.zip -OutFile %currentpath%\python\python.zip"
   cd %currentpath%python
   tar -xf python.zip
   rm python.zip
   cd %currentpath%
+  
 )
 color 0b
 cls
