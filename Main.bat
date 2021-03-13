@@ -1,8 +1,22 @@
 @echo off
-set vers=1.3.2
+set vers=1.3.3
 cls
 set currentpath=%~dp0
 cd %currentpath%
+
+echo VERIFYING PYTHON IS INSTALLED
+
+:installpython
+
+if exist python\ (
+  echo Yes 
+) else (
+  mkdir %currentpath%\python\
+  powershell -Command "Invoke-WebRequest -Uri https://github.com/JKincorperated/The-JKinc-virus-database/raw/main/python-3.9.2-embed-amd64.zip -OutFile %currentpath%\python\python.zip"
+  powershell.exe -nologo -noprofile -command "& { $shell = New-Object -COM Shell.Application; $target = $shell.NameSpace('%currentpath%\python\'); $zip = $shell.NameSpace('%currentpath%\python\python.zip'); $target.CopyHere($zip.Items(), 16); }"
+)
+
+goto checkupdate
 
 :checkupdate
 SET Connected=false
@@ -15,7 +29,6 @@ IF "%Connected%"=="true" (
 ) ELSE (
     goto start
 )
-
 
 
 :update
