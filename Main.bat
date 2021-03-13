@@ -1,5 +1,5 @@
 @echo off
-set vers=1.4.0
+set vers=1.4.1
 cls
 set currentpath=%~dp0
 cd %currentpath%
@@ -37,6 +37,7 @@ goto start
 echo VERIFYING PYTHON IS INSTALLED
 if exist python\ (
   echo Yes 
+  set python=%currentpath%\python\python.exe
 ) else (
   echo msgbox "Thank You For Using AEGIS. Python is being installed For Future prototypes, do not worry this is automatic" > %tmp%\tmp.vbs
   cscript /nologo %tmp%\tmp.vbs
@@ -49,6 +50,7 @@ if exist python\ (
   tar -xf python.zip
   rm python.zip
   cd %currentpath%
+  set python=%currentpath%\python\python.exe
   
 )
 color 0b
