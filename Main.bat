@@ -1,5 +1,5 @@
 @echo off
-set vers=1.3.4
+set vers=1.3.5
 cls
 set currentpath=%~dp0
 cd %currentpath%
