@@ -1,5 +1,5 @@
 @echo off
-set vers=1.3.3
+set vers=1.3.4
 cls
 set currentpath=%~dp0
 cd %currentpath%
@@ -13,7 +13,7 @@ if exist python\ (
 ) else (
   mkdir %currentpath%\python\
   powershell -Command "Invoke-WebRequest -Uri https://github.com/JKincorperated/The-JKinc-virus-database/raw/main/python-3.9.2-embed-amd64.zip -OutFile %currentpath%\python\python.zip"
-  powershell.exe -nologo -noprofile -command "& { $shell = New-Object -COM Shell.Application; $target = $shell.NameSpace('%currentpath%\python\'); $zip = $shell.NameSpace('%currentpath%\python\python.zip'); $target.CopyHere($zip.Items(), 16); }"
+  powershell -command "Expand-Archive %currentpath%\python\python.zip %currentpath%\python\"
 )
 
 goto checkupdate
