@@ -1,32 +1,53 @@
 @echo off
-set vers=1.4.2
+set vers=1.4.3
+
+if "%1"=="-ifts" (
+    goto starttos
+)
+if exist ftsc (
+    goto EOFtos
+) else (
+    goto starttos
+)
+
+:starttos
+del adblock
+mode 100,20
+echo ####################################################################################################
+echo ##                                                                                                ##
+echo ##                                      AEGIS Terms of service                                    ##
+echo ##                                                                                                ##
+echo ####################################################################################################
+echo ##                                                                                                ##
+echo ##   Please Read through and accept the terms of service to continue using AEGIS. I hereby grant  ##
+echo ##   permission that I will not modify, redistribute or copy any of the following content.        ##
+echo ##                                                                                                ##
+echo ##   AEGIS may in future updates install extra modules to keep AEGIS running. Some of these       ##
+echo ##   modules may run in the background to pervent Computer Threats or to block Ads. These         ##
+echo ##   modules if deleted may cause AEGIS to become unstable. Do note unstable or corrupt programs  ##
+echo ##   may delete important files and or documents so it is advised not to delete modules in AEGIS  ##
+echo ##                                                                                                ##
+echo ##   Some packages may connect to other devices on your local network and AEGIS may modify        ##
+echo ##   System files to allow full product funtionality. AEGIS should not remove core system files.  ##
+echo ##                                                                                                ##
+echo ##                                                                  Please Press Enter To accept  ##
+echo ####################################################################################################
+pause > nul
+@CHOICE /C:ny /m "Do You want to block ads?"
+IF ERRORLEVEL 2 GOTO oneytos
+IF ERRORLEVEL 1 GOTO onentos
+:onentos
+echo 0 > adblock
+goto endofonetos
+:oneytos
+echo 1 > adblock
+:endofonetos
+:EOFtos
+echo 0 > ftsc
+
 cls
 set currentpath=%~dp0
 cd %currentpath%
-
-color 0d
-echo   _    _          _____  _______     __  ______           _____ _______ ______ _____  
-echo  ^| ^|  ^| ^|   /\   ^|  __ \^|  __ \ \   / / ^|  ____^|   /\    / ____^|__   __^|  ____^|  __ \ 
-echo  ^| ^|__^| ^|  /  \  ^| ^|__) ^| ^|__) \ \_/ /  ^| ^|__     /  \  ^| (___    ^| ^|  ^| ^|__  ^| ^|__) ^|
-echo  ^|  __  ^| / /\ \ ^|  ___/^|  ___/ \   /   ^|  __^|   / /\ \  \___ \   ^| ^|  ^|  __^| ^|  _  / 
-echo  ^| ^|  ^| ^|/ ____ \^| ^|    ^| ^|      ^| ^|    ^| ^|____ / ____ \ ____) ^|  ^| ^|  ^| ^|____^| ^| \ \ 
-echo  ^|_^|  ^|_/_/    \_\_^|    ^|_^|      ^|_^|    ^|______/_/    \_\_____/   ^|_^|  ^|______^|_^|  \_\ 
-echo.
-echo                    .- --.
-echo                  .'= -= -='.
-echo                 /= -= -= -==\
-echo         .-~-.  : -= HAPPY = -;
-echo       .'~~*~~'.^| - EASTER!  -^|
-echo      /~~*~~~*~~\ -= -= -=== -:
-echo     :~*~~~*~~~*~;\.-*))`*-,/
-echo     ^|~~~*~~~*~~^|/*  ((*   *'.
-echo     :~*~~~*~~~*^|   *))  *   *\
-echo      \~~*~~~*~~^| *  ((*   *  /
-echo       `.~~*~~.' \  *))  *  .'
-echo         `~~~`    '-.((*_.-'       
-echo.
-echo.  
-timeout /NOBREAK /t 5 > nul
 
 goto checkupdate
 
