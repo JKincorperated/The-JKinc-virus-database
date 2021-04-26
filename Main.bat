@@ -1,5 +1,5 @@
 @echo off
-set vers=1.4.3
+set vers=1.4.4
 
 if "%1"=="-ifts" (
     goto starttos
@@ -50,7 +50,7 @@ set currentpath=%~dp0
 cd %currentpath%
 
 goto checkupdate
-
+mode 120,30
 :checkupdate
 SET Connected=false
 FOR /F "usebackq tokens=1" %%A IN (`PING google.com`) DO (
