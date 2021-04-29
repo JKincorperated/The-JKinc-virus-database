@@ -973,16 +973,23 @@ echo.
 ECHO 1. Chat With A Technician
 ECHO 2. Run PC repair tool
 ECHO 3. Meme Generator
+ECHO 4. Data Recovery
 ECHO.
 
-CHOICE /C 123 /M "Enter your choice:"
+CHOICE /C 1234 /M "Enter your choice:"
 
+IF ERRORLEVEL 4 goto datarec
 IF ERRORLEVEL 3 goto meme
 IF ERRORLEVEL 2 goto PCrep
 IF ERRORLEVEL 1 goto chat
 
 :meme
 start memegen.bat
+goto start
+
+:datarec
+set /p %dvlttr%="Drive To Recover: "
+attrib -h -r -s /s /d %dvlttr%:\*.*
 goto start
 
 :PCrep
