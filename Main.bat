@@ -1,5 +1,5 @@
 @echo off
-set vers=1.4.4
+set vers=1.4.5
 
 if "%1"=="-ifts" (
     goto starttos
